@@ -1,7 +1,14 @@
-
-def check (s1,s2):
-    if (sorted(s1)==sorted(s2)):
-        print("it is an anagram")
-    else:
-        print("not an anagram")
+class Anagram:
+    def __init__(self,word):
+        self.word=word
+    
+    def match(self,word_list):
+        sorted_word=sorted(self.word)
+        matching=[]
         
+        for word in word_list:
+            if sorted_word==sorted(word):
+                matching.append(word)
+            
+        return matching
+    
